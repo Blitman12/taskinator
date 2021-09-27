@@ -2,7 +2,9 @@ let buttonEl = document.querySelector("#save-task");
 let tasksToDoEl = document.querySelector("#tasks-to-do");
 
 
-var createTaskHandler = function() {
+var createTaskHandler = function(event) {
+    event.preventDefault();
+
     var listItemEl = document.createElement("li");
     listItemEl.className = "task-item";
     listItemEl.textContent = "This is a new task.";
